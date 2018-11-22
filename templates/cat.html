@@ -1,3 +1,15 @@
-<!doctype html>
-<h1> Cat number {{ n }} 
-, the cats' name is : {{ m }}</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>the cat's name:{{cat_name}}</h1>
+	<form action="/vote_cat/{{n}}" method="POST">
+	 vote: <input type="radio" name="vote" value="{{cat_name}}">
+	 <br>
+	 <input type="submit" name="submit">
+	</form>
+
+</body>
+</html>

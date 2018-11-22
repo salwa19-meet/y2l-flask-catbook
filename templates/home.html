@@ -34,7 +34,7 @@
                 <img class="card-img-top" src="{{url_for('static', filename='images/cat1.jpg')}}">
                 <div class="card-body">
                   <h5 class="card-title">{{cat.name}}</h5>
-                  <p class="card-text">Votes: 0</p>
+                  <p class="card-text">Votes: {{cat.vote}}</p>
                   <a href="cats/{{cat.id}}" class="btn btn-primary">View details</a>
                 </div>
               </div>
@@ -42,7 +42,15 @@
       </div>
       {% endfor%}
     </div>
-  
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card">
+              <a href="/add_cat" class="btn btn-primary">add a Cat </a>  
+           </div>
+        </div>
+      </div>
+
   <!--BOOTSTRAP Javascript import-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
